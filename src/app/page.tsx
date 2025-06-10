@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer'
 import { alternatives } from '@/data/alternatives'
 import { categories } from '@/data/categories'
 import { AlternativeCard } from '@/components/AlternativeCard'
-import { ArrowRight, Code2, Shield, Users, Zap } from 'lucide-react'
+import { ArrowRight, Code2, Shield, Users, Zap, Github, Linkedin, Calendar } from 'lucide-react'
 
 export default function Home() {
   const featuredAlternatives = alternatives.slice(0, 6)
@@ -19,7 +19,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative overflow-hidden border-b">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
-          <div className="container relative z-10 py-16 md:py-24 lg:py-32">
+          <div className="container relative py-16 md:py-24 lg:py-32">
             <div className="flex flex-col items-center text-center space-y-8">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl animate-fade-in">
                 Discover Open Source
@@ -43,6 +43,55 @@ export default function Home() {
                 >
                   Submit an Alternative
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Creator Profile Section */}
+        <section className="py-16 border-b bg-gradient-to-r from-primary/5 via-transparent to-primary/5">
+          <div className="container">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="flex-shrink-0">
+                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+                  <img 
+                    src="https://avatars.githubusercontent.com/u/66141690" 
+                    alt="Tushar Aggarwal"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6">Created by Tushar Aggarwal</h2>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                  <a
+                    href="https://www.linkedin.com/in/tusharaggarwalinseec/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0077B5] text-white hover:bg-[#006399] transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    Connect on LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/tushar2704"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#333] text-white hover:bg-[#24292e] transition-colors"
+                  >
+                    <Github className="h-4 w-4" />
+                    Follow on GitHub
+                  </a>
+                  <a
+                    href="https://topmate.io/tusharaggarwal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
+                  >
+                    <Calendar className="h-4 w-4" />
+                    Book a Session
+                  </a>
+                </div>
               </div>
             </div>
           </div>
